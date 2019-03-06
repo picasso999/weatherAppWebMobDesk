@@ -1,0 +1,16 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput
+           placeholder="Search cities"
+           name="query"
+           [(ngModel)]="query">
+  </mat-form-field>
+  <div class="button-row" style="margin-left: 10px;">
+    <button mat-raised-button
+            color="primary"
+            click="search(query)">Submit</button>
+  </div>
+</form>
+
+<div *ngIf="errorMessage?.message" class="container">{{errorMessage.cod }} | {{ errorMessage.message }}</div>
+
