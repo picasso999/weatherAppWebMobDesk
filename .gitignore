@@ -5,6 +5,10 @@
 /tmp
 /out-tsc
 /www
+/platforms
+/–-overwrite-win32-x64
+/\342\200\223-overwritete-win32-x64/
+/–-overwritete-win32-x64
 
 # dependencies
 /node_modules

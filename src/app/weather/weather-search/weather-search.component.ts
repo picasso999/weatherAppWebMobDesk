@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { WeatherService } from '../weather.service';
+
 import { Weather } from '../../shared/interfaces/weather';
 import { WeatherDataService } from '../weather-data.service';
+import { WeatherService } from '../weather.service';
 
 @Component({
   selector: 'app-weather-search',
@@ -22,13 +23,14 @@ export class WeatherSearchComponent implements OnInit {
     this.weatherDataService.weather = data;
   }
 
-  search() {
+  search(query1) {
+    query1 = this.query;
     this.weatherService
-        .searchWeatherData(this.query)
+        .searchWeatherData(query1)
         .subscribe(
           weather => this.weather = weather,
           error => this.errorMessage = <any>error,
-          () => this.query = ''
+          () => query1 = ''
         );
   }
 

@@ -8,9 +8,7 @@
   <div class="button-row" style="margin-left: 10px;">
     <input mat-raised-button
             color="primary" type="button"
-            onclick="search(query)" name="Submit">
+            (click)="search(query)" value="Submit">
   </div>
 </form>
-
-<div *ngIf="errorMessage?.message" class="container">{{errorMessage.cod }} | {{ errorMessage.message }}</div>
-
+<div *ngIf="errorMessage?.message" class="container"> {{errorMessage.cod }} | {{ errorMessage.message }}</div>
